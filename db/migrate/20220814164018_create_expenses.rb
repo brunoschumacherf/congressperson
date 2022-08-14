@@ -5,6 +5,8 @@ class CreateExpenses < ActiveRecord::Migration[6.1]
       t.string :establishment
       t.float :value
       t.string :note
+      t.string :phone
+      t.string :document
 
       t.timestamps
     end

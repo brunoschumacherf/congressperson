@@ -8,13 +8,13 @@ class CeapsController < ApplicationController
 
   # GET /ceaps/1 or /ceaps/1.json
   def show
+    @deputies = Deputy.where(ceap: @ceap).all
   end
 
   # GET /ceaps/new
   def new
     @ceap = Ceap.new
   end
-
   # GET /ceaps/1/edit
 
   # POST /ceaps or /ceaps.json
@@ -26,7 +26,7 @@ class CeapsController < ApplicationController
 
     respond_to do |format|
       if @ceap.save
-        format.html { redirect_to ceap_url(@ceap), notice: "Ceap was successfully created." }
+        format.html { redirect_to ceap_url(@ceap), notice: "Seu Arquivo está sendo extraido. Pode levar um tempo. Aguarde!!" }
         format.json { render :show, status: :created, location: @ceap }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -41,7 +41,7 @@ class CeapsController < ApplicationController
     @ceap.destroy
 
     respond_to do |format|
-      format.html { redirect_to ceaps_url, notice: "Ceap was successfully destroyed." }
+      format.html { redirect_to ceaps_url, notice: "Ceap Deletado com sucesso" }
       format.json { head :no_content }
     end
   end
@@ -54,6 +54,6 @@ class CeapsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def ceap_params
-      params.require(:ceap).permit(:name, :date, :total_spend)
+      params.require(:ceap).permit(:name, :email, :total_spend)
     end
 end

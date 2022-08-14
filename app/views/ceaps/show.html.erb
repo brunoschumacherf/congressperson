@@ -1,19 +1,24 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @ceap.name %>
-</p>
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Documento</th>
+      <th>Estado</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
 
-<p>
-  <strong>Date:</strong>
-  <%= @ceap.date %>
-</p>
+  <tbody >
+    <% @deputies.each do |deputy| %>
+      <tr scope="col">
+        <td><%= deputy.name %></td>
+        <td><%= deputy.document %></td>
+        <td><%= deputy.state %></td>
+        <td><a href=<%="/expenses?ceap_id=#{@ceap.id}&id=#{deputy.id}"%> class="btn btn-info">Despesas</a></td></tr>
+    <% end %>
+  </tbody>
+</table>
 
-<p>
-  <strong>Total spend:</strong>
-  <%= @ceap.total_spend %>
-</p>
-
-<%= link_to 'Edit', edit_ceap_path(@ceap) %> |
-<%= link_to 'Back', ceaps_path %>
+<%= link_to 'Back', ceaps_path, class: "btn btn-info"%>

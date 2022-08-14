@@ -13,21 +13,21 @@
 
   <div class="field">
     <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, class: "form-control", required: true%>
   </div>
 
   <div class="field">
-    <%= form.label :date %>
-    <%= form.time_select :date %>
+    <%= form.label :email %>
+    <%= form.text_field :email, class: "form-control", required: true%>
   </div>
 
   
-   <div class="form-group">
-      <%= form.label :file, "Upload CSV File" %>
-      <%= form.file_field :file, class: 'form-control-file', required: true %>
+   <div class="custom-file">
+      <%= form.label :file, "Upload CSV File", class: "btn btn-info" %>
+      <%= form.file_field :file, class: 'custom-file-input', required: true %>
    </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Criar Ceap", class: "btn btn-info" %>
   </div>
 <% end %>

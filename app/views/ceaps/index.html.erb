@@ -2,30 +2,30 @@
 
 <h1>Ceaps</h1>
 
-<table>
+<table class="table table-dark">
   <thead>
     <tr>
       <th>Name</th>
-      <th>Date</th>
+      <th>Email</th>
       <th>Total spend</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
-  <tbody>
+  <tbody >
     <% @ceaps.each do |ceap| %>
-      <tr>
+      <tr scope="col">
         <td><%= ceap.name %></td>
-        <td><%= ceap.date %></td>
-        <td><%= ceap.total_spend %></td>
-        <td><%= link_to 'Show', ceap %></td>
-        <td><%= link_to 'Edit', edit_ceap_path(ceap) %></td>
-        <td><%= link_to 'Destroy', ceap, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= ceap.email %></td>
+        <td><%= number_to_currency(ceap.total_spend, unit: "R$", separator: ",", delimiter: ".") %></td>
+        <td><%= link_to 'Deputados', ceap, class: "btn btn-info"%></td>
+        <td><%= link_to 'Excluir', ceap,  class: "btn btn-info", method: :delete, data: { confirm: 'Quer mesmo excluir?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Ceap', new_ceap_path %>
+<div class="col-xs-12 align-right">
+  <%= link_to 'New Ceap', new_ceap_path, class: "btn btn-success bg-green waves-effect" %>
+</div>

@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 2022_08_14_164049) do
 
   create_table "ceaps", force: :cascade do |t|
     t.string "name"
-    t.time "date"
+    t.time "email"
     t.float "total_spend"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 2022_08_14_164049) do
     t.string "name"
     t.string "state"
     t.string "document"
+    t.string "photo"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "ceap_id", null: false
@@ -35,6 +36,8 @@ ActiveRecord::Schema.define(version: 2022_08_14_164049) do
     t.string "establishment"
     t.float "value"
     t.string "note"
+    t.string "phone"
+    t.string "document"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "deputy_id", null: false

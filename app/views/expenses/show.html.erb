@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container-fluid">
+
+  <p>
+    <strong>Fornecedor:</strong>
+    <%= @expense.establishment %>
+  </p>
+    <p>
+    <strong>CNPJ/CPF:</strong>
+    <%= @expense.document %>
+  </p>
+
+  <p>
+    <strong>Numero:</strong>
+    <%= @expense.phone %>
+  </p>
+
+  <p>
+    <strong>Data da Emissao:</strong>
+    <%= @expense.date.to_date %>
+  </p>
+
+  <p>
+    <strong>Valor:</strong>
+    <%= number_to_currency(@expense.value, unit: "R$", separator: ",", delimiter: ".") %>
+  </p>
+
+  <% if @expense.note.present? %>
+    <p>
+      <strong>Link Documento:</strong>
+      <a target="_blank" href="<%= @expense.note %>">PDF</a>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to 'Voltar', '/', class: "btn btn-info"%>
+
