@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @ceap.name %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @ceap.date %>
+</p>
+
+<p>
+  <strong>Total spend:</strong>
+  <%= @ceap.total_spend %>
+</p>
+
+<%= link_to 'Edit', edit_ceap_path(@ceap) %> |
+<%= link_to 'Back', ceaps_path %>

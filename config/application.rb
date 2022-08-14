@@ -10,6 +10,13 @@ module Congressperson
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
+    config.action_controller.include_all_helpers = false
+    config.active_job.queue_adapter = :sidekiq
+    config.generators do |g|
+      g.template_engine :erb
+      g.orm :active_record
+      g.test_framework  :test_unit, fixture: true
+    end
 
     # Configuration for the application, engines, and railties goes here.
     #

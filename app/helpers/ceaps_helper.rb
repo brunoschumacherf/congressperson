@@ -1,0 +1,2 @@
+module CeapsHelper
+end
