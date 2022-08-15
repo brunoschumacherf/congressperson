@@ -11,15 +11,30 @@ default: &default
 
 development:
   <<: *default
-  database: db/development.sqlite3
+  host: ec2-44-205-41-76.compute-1.amazonaws.com
+  database: d7vjvpu92su0c6
+  username: qoripjaqhcibgu
+  password: 9ab88d73614482a0eed3d14217d076f069ca8c297b210e4963d8741780315cdd
+  uri: postgres://qoripjaqhcibgu:9ab88d73614482a0eed3d14217d076f069ca8c297b210e4963d8741780315cdd@ec2-44-205-41-76.compute-1.amazonaws.com:5432/d7vjvpu92su0c6
+  port: 5432
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: db/test.sqlite3
+  host: ec2-44-205-41-76.compute-1.amazonaws.com
+  database: d7vjvpu92su0c6
+  username: qoripjaqhcibgu
+  password: 9ab88d73614482a0eed3d14217d076f069ca8c297b210e4963d8741780315cdd
+  uri: postgres://qoripjaqhcibgu:9ab88d73614482a0eed3d14217d076f069ca8c297b210e4963d8741780315cdd@ec2-44-205-41-76.compute-1.amazonaws.com:5432/d7vjvpu92su0c6
+  port: 5432
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  host: ec2-44-205-41-76.compute-1.amazonaws.com
+  database: d7vjvpu92su0c6
+  username: qoripjaqhcibgu
+  password: 9ab88d73614482a0eed3d14217d076f069ca8c297b210e4963d8741780315cdd
+  uri: postgres://qoripjaqhcibgu:9ab88d73614482a0eed3d14217d076f069ca8c297b210e4963d8741780315cdd@ec2-44-205-41-76.compute-1.amazonaws.com:5432/d7vjvpu92su0c6
+  port: 5432
