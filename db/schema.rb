@@ -12,9 +12,12 @@
 
 ActiveRecord::Schema.define(version: 2022_08_14_164049) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "ceaps", force: :cascade do |t|
     t.string "name"
-    t.time "email"
+    t.string "email"
     t.float "total_spend"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -27,7 +30,7 @@ ActiveRecord::Schema.define(version: 2022_08_14_164049) do
     t.string "photo"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "ceap_id", null: false
+    t.bigint "ceap_id", null: false
     t.index ["ceap_id"], name: "index_deputies_on_ceap_id"
   end
 
@@ -40,7 +43,7 @@ ActiveRecord::Schema.define(version: 2022_08_14_164049) do
     t.string "document"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "deputy_id", null: false
+    t.bigint "deputy_id", null: false
     t.index ["deputy_id"], name: "index_expenses_on_deputy_id"
   end
 

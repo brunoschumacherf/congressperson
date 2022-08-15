@@ -5,17 +5,17 @@
 #   gem 'sqlite3'
 #
 default: &default
-  adapter: sqlite3
+  adapter: postgresql
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
 
 development:
   <<: *default
-  host: ec2-44-205-41-76.compute-1.amazonaws.com
-  database: d7vjvpu92su0c6
-  username: qoripjaqhcibgu
-  password: 9ab88d73614482a0eed3d14217d076f069ca8c297b210e4963d8741780315cdd
-  uri: postgres://qoripjaqhcibgu:9ab88d73614482a0eed3d14217d076f069ca8c297b210e4963d8741780315cdd@ec2-44-205-41-76.compute-1.amazonaws.com:5432/d7vjvpu92su0c6
+  host: ec2-3-223-242-224.compute-1.amazonaws.com
+  database: d4g4neo2usckng
+  username: cdnfdyppuyepgd
+  password: 19dd099efd58f9bc3afaec487668704b8a0bfb8a135310bcf9ac94ba11e74d66
+  uri: postgres://cdnfdyppuyepgd:19dd099efd58f9bc3afaec487668704b8a0bfb8a135310bcf9ac94ba11e74d66@ec2-3-223-242-224.compute-1.amazonaws.com:5432/d4g4neo2usckng
   port: 5432
 
 # Warning: The database defined as "test" will be erased and
@@ -23,18 +23,18 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  host: ec2-44-205-41-76.compute-1.amazonaws.com
-  database: d7vjvpu92su0c6
-  username: qoripjaqhcibgu
-  password: 9ab88d73614482a0eed3d14217d076f069ca8c297b210e4963d8741780315cdd
-  uri: postgres://qoripjaqhcibgu:9ab88d73614482a0eed3d14217d076f069ca8c297b210e4963d8741780315cdd@ec2-44-205-41-76.compute-1.amazonaws.com:5432/d7vjvpu92su0c6
+  host: ec2-3-223-242-224.compute-1.amazonaws.com
+  database: d4g4neo2usckng
+  username: cdnfdyppuyepgd
+  password: 19dd099efd58f9bc3afaec487668704b8a0bfb8a135310bcf9ac94ba11e74d66
+  uri: postgres://cdnfdyppuyepgd:19dd099efd58f9bc3afaec487668704b8a0bfb8a135310bcf9ac94ba11e74d66@ec2-3-223-242-224.compute-1.amazonaws.com:5432/d4g4neo2usckng
   port: 5432
 
 production:
   <<: *default
-  host: ec2-44-205-41-76.compute-1.amazonaws.com
-  database: d7vjvpu92su0c6
-  username: qoripjaqhcibgu
-  password: 9ab88d73614482a0eed3d14217d076f069ca8c297b210e4963d8741780315cdd
-  uri: postgres://qoripjaqhcibgu:9ab88d73614482a0eed3d14217d076f069ca8c297b210e4963d8741780315cdd@ec2-44-205-41-76.compute-1.amazonaws.com:5432/d7vjvpu92su0c6
+  host: ec2-3-223-242-224.compute-1.amazonaws.com
+  database: d4g4neo2usckng
+  username: cdnfdyppuyepgd
+  password: 19dd099efd58f9bc3afaec487668704b8a0bfb8a135310bcf9ac94ba11e74d66
+  uri: postgres://cdnfdyppuyepgd:19dd099efd58f9bc3afaec487668704b8a0bfb8a135310bcf9ac94ba11e74d66@ec2-3-223-242-224.compute-1.amazonaws.com:5432/d4g4neo2usckng
   port: 5432
