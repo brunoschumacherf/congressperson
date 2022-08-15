@@ -9,6 +9,7 @@ Bundler.require(*Rails.groups)
 module Congressperson
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
+    config.assets.initialize_on_precompile = false
     config.load_defaults 6.1
     config.action_controller.include_all_helpers = false
     config.active_job.queue_adapter = :sidekiq
