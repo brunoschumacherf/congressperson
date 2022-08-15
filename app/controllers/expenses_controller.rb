@@ -12,7 +12,8 @@ class ExpensesController < ApplicationController
   def set_expenses
     # @ceap = Ceap.find(params[:ceap_id])
     @deputy =  Deputy.where(id: params[:id]).first
-    @expenses = Expense.where(deputy: @deputy ).all
+    @expenses = @deputy.expenses
+    @higher_expense = @deputy.higher_expense
   end
 
   def set_expense

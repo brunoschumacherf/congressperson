@@ -25,9 +25,19 @@
 
       </tr>
     <% end %>
+  <tr scope="col"> <td colspan="3"><strong> Maior Despesa </strong></td></tr>
+  <tr scope="col">
+    <td><%= @higher_expense.establishment %></td>
+    <td><%= @higher_expense.date %></td>
+    <td><%= number_to_currency(@higher_expense.value, unit: "R$", separator: ",", delimiter: ".") %> </td>
+    <% total += @higher_expense.value %>
+    <td><%= link_to 'Detalhes', details(@higher_expense)	, class: "btn btn-info"%></td>
+  </tr>
   </tbody>
 
 </table>
+
+
 
 <hr class="border-line">
   <small>Valor Total:</small>
@@ -35,3 +45,5 @@
     <h3 class="text-primary text-danger"><b><%= number_to_currency(total, unit: "R$", separator: ",", delimiter: ".") %></b></h3>
   </p>
 <hr class="border-line">
+
+
