@@ -27,7 +27,7 @@ gem 'glyphicons-rails'
 gem "font-awesome-rails"
 gem 'bootstrap', '~> 5.1.3'
 gem 'jquery-rails'
-
+gem 'mini_racer'
 
 # Use Redis adapter to run Action Cable in production
 gem 'redis', '~> 4.0'
