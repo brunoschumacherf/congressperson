@@ -11,11 +11,11 @@ default: &default
 
 development:
   <<: *default
-  host: ec2-3-223-242-224.compute-1.amazonaws.com
-  database: d4g4neo2usckng
-  username: cdnfdyppuyepgd
-  password: 19dd099efd58f9bc3afaec487668704b8a0bfb8a135310bcf9ac94ba11e74d66
-  uri: postgres://cdnfdyppuyepgd:19dd099efd58f9bc3afaec487668704b8a0bfb8a135310bcf9ac94ba11e74d66@ec2-3-223-242-224.compute-1.amazonaws.com:5432/d4g4neo2usckng
+  host: ec2-34-203-182-65.compute-1.amazonaws.com
+  database: d9a32nuapq8egq
+  username: sfselnzcvxwtaq
+  password: e7599d97e907f1607c49d002193eafc489a8f77151423426423a3ecbd5579c33
+  uri: postgres://sfselnzcvxwtaq:e7599d97e907f1607c49d002193eafc489a8f77151423426423a3ecbd5579c33@ec2-34-203-182-65.compute-1.amazonaws.com:5432/d9a32nuapq8egq
   port: 5432
 
 # Warning: The database defined as "test" will be erased and
@@ -23,18 +23,18 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  host: ec2-3-223-242-224.compute-1.amazonaws.com
-  database: d4g4neo2usckng
-  username: cdnfdyppuyepgd
-  password: 19dd099efd58f9bc3afaec487668704b8a0bfb8a135310bcf9ac94ba11e74d66
-  uri: postgres://cdnfdyppuyepgd:19dd099efd58f9bc3afaec487668704b8a0bfb8a135310bcf9ac94ba11e74d66@ec2-3-223-242-224.compute-1.amazonaws.com:5432/d4g4neo2usckng
+  host: ec2-34-203-182-65.compute-1.amazonaws.com
+  database: d9a32nuapq8egq
+  username: sfselnzcvxwtaq
+  password: e7599d97e907f1607c49d002193eafc489a8f77151423426423a3ecbd5579c33
+  uri: postgres://sfselnzcvxwtaq:e7599d97e907f1607c49d002193eafc489a8f77151423426423a3ecbd5579c33@ec2-34-203-182-65.compute-1.amazonaws.com:5432/d9a32nuapq8egq
   port: 5432
 
 production:
   <<: *default
-  host: ec2-3-223-242-224.compute-1.amazonaws.com
-  database: d4g4neo2usckng
-  username: cdnfdyppuyepgd
-  password: 19dd099efd58f9bc3afaec487668704b8a0bfb8a135310bcf9ac94ba11e74d66
-  uri: postgres://cdnfdyppuyepgd:19dd099efd58f9bc3afaec487668704b8a0bfb8a135310bcf9ac94ba11e74d66@ec2-3-223-242-224.compute-1.amazonaws.com:5432/d4g4neo2usckng
+  host: ec2-34-203-182-65.compute-1.amazonaws.com
+  database: d9a32nuapq8egq
+  username: sfselnzcvxwtaq
+  password: e7599d97e907f1607c49d002193eafc489a8f77151423426423a3ecbd5579c33
+  uri: postgres://sfselnzcvxwtaq:e7599d97e907f1607c49d002193eafc489a8f77151423426423a3ecbd5579c33@ec2-34-203-182-65.compute-1.amazonaws.com:5432/d9a32nuapq8egq
   port: 5432
