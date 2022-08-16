@@ -22,10 +22,10 @@
   </div>
 
   
-   <div class="custom-file">
-      <%= form.label :file, "Upload CSV File", class: "btn btn-info" %>
-      <%= form.file_field :file, class: 'custom-file-input', required: true %>
-   </div>
+  <div class="input-group mb-3">
+    <label class="input-group-text" for="inputGroupFile01">Arquivo CSV</label>
+    <%= file_field_tag :file, class:"form-control"%>
+  </div>
 
   <div class="actions">
     <%= form.submit "Criar Ceap", class: "btn btn-info" %>

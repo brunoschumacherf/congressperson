@@ -21,7 +21,7 @@ class CeapsController < ApplicationController
   def create
     @ceap = Ceap.new(ceap_params)
     @ceap.save(validate: false)
-    file = params[:ceap][:file].tempfile.path
+    file = params[:file].tempfile.path
     ReadCsvJob.perform_later(file, @ceap)
 
     respond_to do |format|
