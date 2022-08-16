@@ -8,7 +8,7 @@ class CeapsController < ApplicationController
 
   # GET /ceaps/1 or /ceaps/1.json
   def show
-    @deputies = Deputy.where(ceap: @ceap).all
+    @deputies =  @ceap.deputies
   end
 
   # GET /ceaps/new
