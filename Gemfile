@@ -20,7 +20,8 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 
 gem 'mimemagic', '~> 0.3.10'
-gem 'sidekiq', '>= 6.4.1'
+gem 'sidekiq'
+gem 'sidekiq-failures', '~> 1.0'
 gem "paperclip"
 gem 'bootstrap-sass'
 gem 'glyphicons-rails'
