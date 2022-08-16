@@ -38,8 +38,7 @@ class CeapsController < ApplicationController
   # DELETE /ceaps/1 or /ceaps/1.json
   def destroy
     @ceap = Ceap.find(params[:id])
-    @ceap.destroy
-
+    DestroyCeapJob.perform_later(@ceap)
     respond_to do |format|
       format.html { redirect_to ceaps_url, notice: "Ceap Deletado com sucesso" }
       format.json { head :no_content }
