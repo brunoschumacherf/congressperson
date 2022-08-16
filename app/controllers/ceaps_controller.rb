@@ -26,7 +26,7 @@ class CeapsController < ApplicationController
 
     respond_to do |format|
       if @ceap.save
-        format.html { redirect_to ceap_url(@ceap), notice: "Seu Arquivo está sendo extraido. Pode levar um tempo. Aguarde!!" }
+        format.html { redirect_to '/', notice: "Seu Arquivo está sendo extraido. Pode levar um tempo. Aguarde!!" }
         format.json { render :show, status: :created, location: @ceap }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -40,7 +40,7 @@ class CeapsController < ApplicationController
     @ceap = Ceap.find(params[:id])
     DestroyCeapJob.perform_later(@ceap)
     respond_to do |format|
-      format.html { redirect_to ceaps_url, notice: "Ceap Deletado com sucesso" }
+      format.html { redirect_to ceaps_url, notice: "Ceap Sendo Deletado" }
       format.json { head :no_content }
     end
   end
