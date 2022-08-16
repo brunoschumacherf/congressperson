@@ -1,4 +1,4 @@
-<%= form_with(model: ceap) do |form| %>
+<%= form_with(model: ceap, multipart: true) do |form| %>
   <% if ceap.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(ceap.errors.count, "error") %> prohibited this ceap from being saved:</h2>
